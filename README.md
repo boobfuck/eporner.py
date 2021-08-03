@@ -7,6 +7,7 @@ Install eporner.py via `pip`:
 ```shell
 $ pip install eporner.py
 ```
+Requires Python 3.7+
 
 ## Documentation
-*soon...*
+Can be found [here](https://epornerpy.readthedocs.io/en/latest).
