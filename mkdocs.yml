@@ -1,0 +1,16 @@
+site_name: eporner.py
+repo_url: https://github.com/boobfuck/eporner.py
+edit_uri: ""
+site_author: 'boobfuck'
+copyright: 'Copyright 2021-present boobfuck'
+theme:
+  name: readthedocs
+
+markdown_extensions:
+  - toc:
+      permalink: True
+
+nav:
+  - Home: 'index.md'
+  - 'Getting Started': 'getting-started.md'
+  - 'Manuals': 'manuals.md'
