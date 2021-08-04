@@ -23,11 +23,11 @@ DEALINGS IN THE SOFTWARE.
 """
 
 class EpornerError(Exception):
-    """Base exception class for all eporner.py errors."""
+    """Base exception class for all eporner errors."""
     pass
 
 class NoResults(EpornerError):
-    """Exception raised when no videos found for thr query."""
+    """Exception raised when no results found for the query."""
     pass
 
 class HTTPException(EpornerError):
