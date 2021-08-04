@@ -28,16 +28,13 @@ from dataclasses import dataclass
 @dataclass
 class Result:
     """
-    count: int
-        The number of videos returned on current result page.
-    current_page: int
-        The urrent result page number.
-    total_count: int
-        The total number of all videos found matching your criteria.
-    total_pages: int
-        The total number of pages with all results matching your criteria assuming current ``per_page`` value.
-    videos: list
-        A list of ``Video`` objects.
+    The result of the query.
+    ### Attributes
+    count (int) - The number of videos returned on current result page.
+    current_page (int) - The urrent result page number.
+    total_count (int) -The total number of all videos found matching your criteria.
+    total_pages (int) - The total number of pages with all results matching your criteria assuming current ``per_page`` value.
+    videos (list) - A list of ``Video`` objects.
     """
     count: int
     current_page: int
@@ -48,15 +45,15 @@ class Result:
 @dataclass
 class Thumbnail:
     """
-    size: str
-        The thumbnail size: big, medium, small.
-    width: int
-        The width of the thumbnail.
-    height: int
-        The height of the thumbnail.
-    src: str
-        The url of the thumbnail.
+    The thumbnail information.
+
+    ### Atrributes
+    size (str) - The thumbnail size: big, medium, small.
+    width (int) - The width of the thumbnail.
+    height (int) - The height of the thumbnail.
+    src (str) - The url of the thumbnail.
     """
+    # TODO: Rename src to url?
     size: str
     width: int
     height: int
@@ -65,30 +62,18 @@ class Thumbnail:
 @dataclass
 class Video:
     """
-    id: int
-        Unique ID of the video.
-    title: str
-        The video title.
-    tags: list
-        The tags assigned to the video.
-    views: int
-        The Estimated number of video views.
-    rate: float
-        The video rate. Valid range is ``0.00`` to ``5.00``.
-    url: str
-        The URL of the video on Eporner.
-    added: str
-        The date of the video added on Eporner.
-    length_sec: int
-        The video length in seconds.
-    length: str
-        The video length in ``mm:ss`` format or ``hh:mm:ss`` format if video longer than 60 minutes.
-    embed_url: str
-        The embed url of the video.
-    default_thumb: Thumbnail
-        The video's default thumbnail information.
-    thumbs: list
-        A list of ``Thumbnail`` objects.
+    id (in) - Unique ID of the video.
+    title (str) - The video title.
+    tags (list) - The tags assigned to the video.
+    views (int) - The Estimated number of video views.
+    rate (float) - The video rate. Valid range is ``0.00`` to ``5.00``.
+    url (str) - The URL of the video on Eporner.
+    added (str) - The date of the video added on Eporner.
+    length_sec (int) - The video length in seconds.
+    length (str) - The video length in ``mm:ss`` format or ``hh:mm:ss`` format if video longer than 60 minutes.
+    embed_url (str) - The embed url of the video.
+    default_thumb (Thumbnail) - The video's default thumbnail information.
+    thumbs (list) - A list of ``Thumbnail`` objects.
     """
     id: str
     title: str
