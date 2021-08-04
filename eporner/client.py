@@ -22,13 +22,15 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 """
 
+from __future__ import annotations
+
 import asyncio
 
 from .http import *
 from .enums import *
 
 class Client:
-    def __init__(self):
+    def __init__(self) -> None:
         self.http = HTTP()
 
     async def get_videos(
@@ -40,7 +42,8 @@ class Client:
         thumbsize: Thumbsize = Thumbsize.medium,
         order: Order = Order.latest,
         gay_content: GayContent = GayContent.none,
-        low_quality: LowQuality = LowQuality.include) -> Result:
+        low_quality: LowQuality = LowQuality.include
+    ) -> Result:
         """
         Gets the videos.
 
@@ -96,6 +99,6 @@ class Client:
         data = await self.http.search_removed(params=params)
         return self.http.parse_removed(data)
 
-    def close(self):
+    def close(self) -> None:
         """Closes the internal client session."""
         asyncio.create_task(self.http.close())
